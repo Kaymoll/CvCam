@@ -23,6 +23,7 @@ body {
     color: var(--text-primary);
 }
 
+/* Header Section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -59,4 +60,56 @@ body {
 
 .nav a:hover {
     color: var(--border-color);
+}
+
+/* First Section */
+.first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.first-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.first h1 {
+    font-size: 2.5rem;
+}
+
+.first .name {
+    color: var(--text-color);
+}
+
+.first .role {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.first .description {
+    color: var(--text-third) ;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+.first-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.img-border {
+    border: 2px var(--border-color);
 }
