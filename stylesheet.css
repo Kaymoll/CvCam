@@ -1,49 +1,62 @@
-img {
-	width: 50%;
-	height: 50%;
-	margin: 0 auto;
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #ffffff0d;
+    --bg-header: #000000ac;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --text-third: #d1d5db;
+    --text-color: #7c8ee7;
+    --text-other: #ffffff;
+    --text-gradient: linear-gradient(40deg, #7c8ee7, #b0b4c8);
+    --border-color: #7c8ee7;
 }
 
-h1 {
-    color: green;
-}
-
-li {
-    font-style: italic;
-}
-/* Selecteur ID (un seul par page) */
-#phraseintro {
-    color: green;
-}
-
-/* Selecteur Classe (plusieurs par page) */
-.intro { 
-    background: whitesmoke;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-tr:nth-of-type(even){
-    background-color:lightgrey;
-}
-
-.paragraphe {
-    background-color:whitesmoke;
-}
-
-.container {
+.header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-header);
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(30px);
 }
 
-.paragraphe:nth-of-type(even){
-    background-color: midnightblue;
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.paragraphe {
-    background-color: #cebaaa;
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: right;
+    justify-content: right;
+}
+
+.nav a {
+    color: var(--text-other);
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: var(--border-color);
 }
