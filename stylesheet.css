@@ -9,6 +9,8 @@
     --text-other: #ffffff;
     --text-gradient: linear-gradient(40deg, #7c8ee7, #b0b4c8);
     --border-color: #7c8ee7;
+    --btn1: linear-gradient(135deg, #7c8ee7, #959ecb);
+    --btn2: #ffffff;
 }
 
 * {
@@ -116,6 +118,48 @@ img {
 .img-border {
     border: 2px solid var(--border-color);
 }
+
+.first-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Buttons */
+
+.btn-primary {
+    background: var(--btn1);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--color-btn1);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    padding: 0.8rem 1.5rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--color-btn2);
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--border-color);
+    color: var(--color-btn1);
+}
+
+/* About Section */
 
 /* Responsive */
 @media (max-width: 768px) {
