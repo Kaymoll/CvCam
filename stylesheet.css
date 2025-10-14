@@ -1,0 +1,49 @@
+img {
+	width: 50%;
+	height: 50%;
+	margin: 0 auto;
+}
+
+h1 {
+    color: green;
+}
+
+li {
+    font-style: italic;
+}
+/* Selecteur ID (un seul par page) */
+#phraseintro {
+    color: green;
+}
+
+/* Selecteur Classe (plusieurs par page) */
+.intro { 
+    background: whitesmoke;
+}
+
+body {
+    text-align: center;
+}
+
+tr:nth-of-type(even){
+    background-color:lightgrey;
+}
+
+.paragraphe {
+    background-color:whitesmoke;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.paragraphe:nth-of-type(even){
+    background-color: midnightblue;
+}
+
+.paragraphe {
+    background-color: #cebaaa;
+}
