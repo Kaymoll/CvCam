@@ -27,6 +27,10 @@ body {
     color: var(--text-primary);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header Section */
 .header {
     display: flex;
