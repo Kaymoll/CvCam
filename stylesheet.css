@@ -11,6 +11,8 @@
     --border-color: #7c8ee7;
     --btn1: linear-gradient(135deg, #7c8ee7, #959ecb);
     --btn2: #ffffff;
+    --color-btn1: #ffffff;
+    --color-btn2: #7c8ee7;
 }
 
 * {
@@ -68,8 +70,8 @@ body {
 .hamburger-btn {
     display: none;
     margin: -1rem;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: transparent;
     border: 2px solid var(--border-color);
     border-radius: 12px;
@@ -89,7 +91,7 @@ body {
 }
 
 .hamburger-line {
-    width: 20px;
+    width: 1.5rem;
     height: 2px;
     background: var(--text-other);
     border-radius: 2px;
@@ -119,13 +121,13 @@ body {
     backdrop-filter: blur(30px);
     transition: all 0.4s ease;
     z-index: 999;
-    padding: 100px 40px 40px;
+    padding: 3.5rem;
     border-bottom: 2px solid var(--border-color);
     color: var(--text-other);
 }
 
 .menu-overlay.active {
-    top: -20px;
+    top: -2rem;
 }
 
 .menu-nav ul {
@@ -137,7 +139,7 @@ body {
 }
 
 .menu-item {
-    margin-bottom: 25px;
+    padding: 1.2rem;
 }
 
 .menu-link {
@@ -147,7 +149,6 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     display: block;
-    padding: 10px 0;
 }
 
 .menu-link:hover {
