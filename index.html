@@ -10,7 +10,12 @@
 
 <body>
     <header class="header">
-        <div class="logo">Camille Lucidarme</div>       
+        <div class="logo">Camille Lucidarme</div>
+            <div class="toggle-switch">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox">
+                </label>
+            </div>
         <nav class="nav">
             <a href="#about">À propos</a>
             <a href="#">Travail</a>
@@ -137,7 +142,35 @@
     </main>
 
     <script>
-        // Menu hamburger
+        // Script gestionnaire du thème Dark/Light
+        const themeToggle = document.getElementById('theme-checkbox');
+        const body = document.body;
+        const header = document.querySelector('.header');
+
+        // Fonction pour appliquer le thème
+        function applyTheme(isLight) {
+            if (isLight) {
+                body.setAttribute('data-theme', 'light');
+                header.setAttribute('data-theme', 'light');
+                document.querySelector('.first.fade-in').setAttribute('data-theme', 'light');
+                about.setAttribute('data-theme', 'light');
+                portfolio.setAttribute('data-theme', 'light');
+            } else {
+                body.removeAttribute('data-theme');
+                header.removeAttribute('data-theme');
+                document.querySelector('.first.fade-in').removeAttribute('data-theme');
+                about.removeAttribute('data-theme');
+                portfolio.removeAttribute('data-theme');
+            }
+        // Enregistrement du thème
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+        // Checker de l'event
+        themeToggle.addEventListener('change', function () {
+            applyTheme(this.checked);
+        });
+
+        // Script menu burger
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const menuOverlay = document.getElementById('menuOverlay');
         const backdrop = document.getElementById('backdrop');
