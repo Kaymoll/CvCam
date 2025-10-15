@@ -374,6 +374,42 @@ img {
     transition: all 0.3s ease;
 }
 
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card {
+    background: var(--bg-primary);
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.portfolio-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio p {
+    color: var(--text-third);
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav {
@@ -412,6 +448,13 @@ img {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1rem;
+        margin-left: -1rem;
     }
 }
 
