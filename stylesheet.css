@@ -46,10 +46,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    transition: all 0.3s ease;
 }
 
 html {
     scroll-behavior: smooth;
+    transition: all 0.3s ease;
 }
 
 /* Header Section */
@@ -64,6 +66,7 @@ html {
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(30px);
+    transition: all 0.3s ease;
 }
 
 .logo {
