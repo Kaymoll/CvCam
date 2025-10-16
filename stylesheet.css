@@ -77,6 +77,7 @@ html {
     -webkit-background-clip: text;
     z-index: 1003;
     color: transparent;
+    cursor: help;
 }
 
 /* Toggle Switch Theme*/
@@ -225,6 +226,20 @@ html {
     margin: 0 auto;
 }
 
+.first-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+img {
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+}
+
 .first-content {
     flex: 1;
     max-width: 600px;
@@ -253,25 +268,6 @@ html {
 .first-buttons {
     display: flex;
     gap: 1rem;
-}
-
-/* Photo */
-.first-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2rem;
-}
-
-img {
-    max-width: 20rem;
-    max-height: 20rem;
-    border-radius: 50%;
-    border: 3px solid var(--text-gradient);
-}
-
-.img-border {
-    border: 2px solid var(--border-color);
 }
 
 /* Buttons */
@@ -555,7 +551,7 @@ img {
 
     .first-image {
         position: relative;
-        margin: 4rem 0 0 0;
+        margin: -2.5rem 0 1rem;
     }
 
     img {

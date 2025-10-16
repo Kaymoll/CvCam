@@ -16,22 +16,22 @@
                     <input type="checkbox" id="theme-checkbox">
                 </label>
             </div>
-        <nav class="nav">
+            <nav class="nav">
             <a href="#about">À propos</a>
             <a href="#portfolio">Projets</a>
             <a href="#contact">Contact</a>
-        </nav>
+            </nav>
 
-        <button class="hamburger-btn" id="hamburgerBtn">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-        </button>
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
 
-        <div class="backdrop" id="backdrop"></div>
+            <div class="backdrop" id="backdrop"></div>
 
-        <div class="menu-overlay" id="menuOverlay">
-            <nav class="menu-nav">
+            <div class="menu-overlay" id="menuOverlay">
+                <nav class="menu-nav">
                 <ul>
                     <li class="menu-item">
                         <a href="#about" class="menu-link">À propos</a>
@@ -43,14 +43,16 @@
                         <a href="#contact" class="menu-link">Contact</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
-
+                </nav>
+            </div>
         </div>
 	</header>
 
     <main>
-    <section class="first fade-in">
+    <section class="first">
+        <div class="first-image">
+            <img src="img/moi.webp" alt="Image" class="img-border"/>
+        </div>
         <div class="first-content">
             <h1>Bonjour,
                 <p>je suis <span class="name">Camille Lucidarme</span></p>
@@ -63,9 +65,6 @@
                 <a href="#about" class="btn-primary">À propos de moi</a>
                 <a href="#contact" class="btn-secondary">Entrer en contact</a>
             </div>
-        </div>
-        <div class="first-image">
-            <img src="img/moi.jpg" alt="Image" class="img-border"/>
         </div>
     </section>
 
@@ -194,7 +193,7 @@
     </main>
 
         <footer class="footer">
-        <p>&copy; 2025 Camille Lucidarme.</p>
+        <p>&copy; 2025 Camille Lucidarme</p>
         </div>
         <div class="footer-links">
             <p>
@@ -218,13 +217,13 @@
             if (isLight) {
                 body.setAttribute('data-theme', 'light');
                 header.setAttribute('data-theme', 'light');
-                document.querySelector('.first.fade-in').setAttribute('data-theme', 'light');
+                document.querySelector('.first').setAttribute('data-theme', 'light');
                 about.setAttribute('data-theme', 'light');
                 portfolio.setAttribute('data-theme', 'light');
             } else {
                 body.removeAttribute('data-theme');
                 header.removeAttribute('data-theme');
-                document.querySelector('.first.fade-in').removeAttribute('data-theme');
+                document.querySelector('.first').removeAttribute('data-theme');
                 about.removeAttribute('data-theme');
                 portfolio.removeAttribute('data-theme');
             }
