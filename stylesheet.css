@@ -263,6 +263,7 @@ img {
     color: var(--text-third);
     margin-bottom: 2rem;
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .first-buttons {
@@ -322,6 +323,7 @@ img {
     max-width: 800px;
     margin: 0 auto 3rem;
     font-size: 1.1rem;
+    line-height: 1.5;
     transition: all 0.3s ease;
 }
 
@@ -368,6 +370,7 @@ img {
 .skill-list {
     color: var(--text-third);
     margin: 0.5rem 0;
+    line-height: 1.5;
     transition: all 0.3s ease;
 }
 
@@ -405,6 +408,12 @@ img {
     color: var(--text-third);
     margin-bottom: 3rem;
     transition: all 0.3s ease;
+}
+
+.portfolio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* Contact Section */
@@ -568,6 +577,12 @@ img {
     .skills-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-buttons {
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
     }
 
     .footer {
