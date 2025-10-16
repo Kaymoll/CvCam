@@ -261,6 +261,15 @@
             applyTheme(this.checked);
         });
 
+        // Sauvegarde de l'event
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            const isLight = savedTheme === 'light';
+
+            themeToggle.checked = isLight;
+            applyTheme(isLight);
+        });
+
         // Script menu burger
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const menuOverlay = document.getElementById('menuOverlay');
