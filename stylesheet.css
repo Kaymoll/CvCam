@@ -77,7 +77,7 @@ html {
     -webkit-background-clip: text;
     z-index: 1003;
     color: transparent;
-    cursor: help;
+    cursor: wait;
 }
 
 /* Toggle Switch Theme*/
