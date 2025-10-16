@@ -283,11 +283,11 @@ img {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.3s;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px) scale(1.05);
 }
 
 .btn-secondary {
