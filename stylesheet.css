@@ -631,6 +631,8 @@ img {
         flex-direction: row;
         display: inline-flex;
         justify-content: center;
+        width: auto;
+        height: auto;
     }
 
     .skills-grid,
