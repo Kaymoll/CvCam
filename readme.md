@@ -1,3 +1,3 @@
 # Mon Cv
 
-Ici, vous pouvez retrouver le code HTML/CSS de mon site web.
+Vous pouvez avoir accès au code HTML/CSS et JS de mon site web
