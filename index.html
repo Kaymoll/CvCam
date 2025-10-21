@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lucidarme Camille CV</title>
     <meta name="description" content="CV de Camille Lucidarme, développeur web en formation. Découvrez mes projets, mes compétences et mes objectifs professionnels.">
-    <link rel="icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="stylesheet.css" />
+    <link rel="icon" href="./assets/public/favicon.ico" />
+	<link rel="stylesheet" href="./assets/styles/styles.css" />
 </head>
 
 <body>
@@ -54,7 +54,7 @@
     <main>
     <section class="first">
         <div class="first-image">
-            <img src="img/moi.webp" alt="Image" class="img-border"/>
+            <img src="./assets/public/ProfilCamilleLucidarme.webp" alt="Profil Camille Lucidarme" class="img-border"/>
         </div>
         <div class="first-content">
             <h1>Bonjour,
@@ -232,96 +232,8 @@
         </div>
     </footer>
 
-    <script>
-        // Ajouter un fondu lors du défilement
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    entry.target.classList.remove('fade-out');
-                } else {
-                    entry.target.classList.remove('fade-in');
-                    entry.target.classList.add('fade-out');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Script gestionnaire du thème Dark/Light
-        const themeToggle = document.getElementById('theme-checkbox');
-        const body = document.body;
-        const header = document.querySelector('.header');
-
-        // Fonction pour appliquer le thème
-        function applyTheme(isLight) {
-            if (isLight) {
-                body.setAttribute('data-theme', 'light');
-                header.setAttribute('data-theme', 'light');
-                document.querySelector('.first').setAttribute('data-theme', 'light');
-                about.setAttribute('data-theme', 'light');
-                portfolio.setAttribute('data-theme', 'light');
-            } else {
-                body.removeAttribute('data-theme');
-                header.removeAttribute('data-theme');
-                document.querySelector('.first').removeAttribute('data-theme');
-                about.removeAttribute('data-theme');
-                portfolio.removeAttribute('data-theme');
-            }
-        // Enregistrement du thème
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        }
-        // Checker de l'event
-        themeToggle.addEventListener('change', function () {
-            applyTheme(this.checked);
-        });
-
-        // Sauvegarde de l'event
-        document.addEventListener('DOMContentLoaded', function () {
-            const savedTheme = localStorage.getItem('theme');
-            const isLight = savedTheme === 'light';
-
-            themeToggle.checked = isLight;
-            applyTheme(isLight);
-        });
-
-        // Script menu burger
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const menuOverlay = document.getElementById('menuOverlay');
-        const backdrop = document.getElementById('backdrop');
-
-        function toggleMenu() {
-            hamburgerBtn.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-            backdrop.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            hamburgerBtn.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            backdrop.classList.remove('active');
-        }
-
-        hamburgerBtn.addEventListener('click', toggleMenu);
-        backdrop.addEventListener('click', closeMenu);
-
-        // Fermer lors du clic sur un lien
-        document.querySelectorAll('.menu-link').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Gérer le redimensionnement de fenêtre
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
-        });
-    </script>
+    <script src="./assets/script/animationScroll.js"></script>
+    <script src="./assets/script/darkLight.js"></script>
+    <script src="./assets/script/menuBurger.js"></script>
 </body>
 </html>
